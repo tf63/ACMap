@@ -1,0 +1,19 @@
+{
+    "files.insertFinalNewline": true,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit",
+        "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.callArgumentNames": "all"
+}

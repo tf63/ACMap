@@ -1,0 +1,114 @@
+[project]
+name = "acmap"
+version = "0.1.0"
+description = "The implementation of Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning."
+dependencies = [
+    "torch==2.0.1+cu117",
+    "torchvision==0.15.2+cu117",
+    "timm==0.6.12",
+    "scipy==1.10.1",
+    "easydict==1.13",
+    "pydantic==2.7.4",
+    "pyyaml==6.0.1",
+    "wandb==0.17.0",
+    "pandas==2.0.3",
+    "matplotlib==3.7.5",
+    "seaborn==0.13.2",
+    "python-dotenv>=1.0.1",
+]
+
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/**/*.py"]
+exclude = ["src/acmap/scripts", "src/acmap/tests"]
+
+# https://hatch.pypa.io/1.13/config/build/#rewriting-paths
+[tool.hatch.build.targets.wheel]
+packages = ["src/acmap"]
+
+[tool.rye]
+virtual = false
+managed = true
+
+dev-dependencies = [
+  "gdown==5.2.0",
+  "ruff==0.6.1",
+  "ipython==8.12.3",
+  "jupyter==1.1.1",
+]
+
+[[tool.rye.sources]]
+name = "torch"
+url = "https://download.pytorch.org/whl/torch_stable.html"
+type = "find-links"
+
+[tool.rye.scripts]
+lint = "ruff check src"
+"lint:fix" = "ruff check --fix src"
+"format:ruff" = "ruff format src"
+format = { chain = ["format:ruff", "lint:fix"] }
+
+[tool.ruff]
+line-length = 119
+indent-width = 4
+# include files: ["*.py", "*.pyi", "**/pyproject.toml] https://docs.astral.sh/ruff/settings/#include
+# exclude files: [".venv", "dist", ...] https://docs.astral.sh/ruff/settings/#exclude
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "auto"
+docstring-code-line-length = "dynamic"
+docstring-code-format = true
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+]
+
+# https://docs.astral.sh/ruff/rules/
+ignore = [
+  "F401",
+  "W293",
+  "E111",
+  "E114",
+  "E402",
+  "E501",
+  # https://docs.astral.sh/ruff/rules/#flake8-simplify-sim
+  # Use ternary operator {contents} instead of if-else-block
+  "SIM108",
+  # Combine if branches using logical or operator
+  "SIM114",
+  # Use `key in dict` instead of `key in dict.keys()`
+  "SIM118",
+]
+
+[tool.ruff.lint.flake8-annotations]
+# Whether to suppress ANN401 for dynamically typed *args and **kwargs arguments.
+allow-star-arg-any = true
+
+[tool.ruff.lint.flake8-implicit-str-concat]
+# Whether to allow implicit string concatenations for multiline strings. By default, implicit concatenations of multiline strings are allowed (but continuation lines, delimited with a backslash, are prohibited).
+allow-multiline = false
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+combine-as-imports = true

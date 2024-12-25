@@ -1,0 +1,34 @@
+# python
+**/.venv/**/*
+**/wandb/**/*
+**/run/**/*
+**/*cache*/**/*
+**/data/**
+**/dataset/**
+
+# lock
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# trash
+**/.DS_Store
+**/*.hbs
+
+# dir
+**/node_modules/**/*
+**/public/**/*
+**/dist/**/*
+**/dist-ssr/**/*
+**/build/**/*
+**/storybook-static/**/*
+**/coverage/**/*
+**/bin/**/*
+**/obj/**/*
+**/out/**/*
+**/.yarn/**/*
+**/.pnpm-store/**/*
+**/.next/**/*
+**/.vercel/**/*
+**/.swc/**/*
+**/.turbo/**/*

@@ -1,0 +1,76 @@
+FROM nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu20.04 AS base
+
+# Set non-interactive mode (prevents blocking due to waiting for input)
+ARG DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /app
+
+RUN --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    apt-get update && \
+    apt-get install -y \
+    wget \
+    bzip2 \
+    build-essential \
+    git \
+    git-lfs \
+    curl \
+    ca-certificates \
+    libsndfile1-dev \
+    libgl1
+
+# ----------------------------------------------------------------
+# Setup user environment
+# ----------------------------------------------------------------
+# UID and GID are provided externally
+ARG USER_UID=10001
+ARG USER_GID=10001
+
+# Username and group name inside the container
+ARG USER_NAME=user
+ARG GROUP_NAME=user
+
+# Create a group if it does not exist成
+RUN if ! getent group $USER_GID >/dev/null; then \
+    groupadd -g $USER_GID $GROUP_NAME; \
+    fi
+
+# Create a user
+RUN useradd -m -u $USER_UID -g $USER_GID -s /bin/bash $USER_NAME
+
+# Python version
+ARG PYTHON_VERSION
+# Disable buffering
+ENV PYTHONUNBUFFERED=1
+# Prevent creation of .pyc files
+ENV PYTHONDONTWRITEBYTECODE=1
+# Rye version
+ENV RYE_VERSION=0.38.0
+# Installation directory for Rye
+ENV RYE_HOME=/opt/rye
+# Directory to save models for torchvision
+ENV TORCH_HOME /data/.cache/torch
+# Directory to save models for Hugging Face
+ENV HF_HOME /data/.cache/huggingface
+
+# Setup user
+RUN chown $USER_UID:$USER_GID /app && \
+    mkdir $RYE_HOME && \
+    chown $USER_UID:$USER_GID $RYE_HOME
+
+# Change the initial user
+USER $USER_NAME
+ENV PATH=$PATH:$RYE_HOME/shims:/home/$USER_NAME/.local/bin
+
+# Install Rye
+RUN curl -sSf https://rye.astral.sh/get | RYE_VERSION=$RYE_VERSION RYE_INSTALL_OPTION="--yes" bash && \
+    rye config --set-bool behavior.global-python=true && \
+    rye config --set-bool behavior.use-uv=true
+
+# ----------------------------------------------------------------
+# torch-1.9.0 environment
+# ----------------------------------------------------------------
+FROM base AS torch-1.9.0
+
+COPY --chown=$USER_NAME:$GROUP_NAME .python-version pyproject.toml requirements.lock requirements-dev.lock README.md ./
+RUN rye pin $PYTHON_VERSION && rye sync

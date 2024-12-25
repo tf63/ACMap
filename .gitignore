@@ -1,0 +1,91 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Local environment
+.env
+
+# data dir
+data/
+dataset/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+wheels/
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-wheel-metadata
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ruff
+.ruff_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Output directories
+.out
+out/
+migrations/
+
+# Machine Learning
+wandb/
+lightning_logs/
+ckpts/
+
+# logs
+run/
+logs/
+nohup.out

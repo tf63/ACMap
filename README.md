@@ -18,7 +18,7 @@ as tasks increase. Extensive experiments on five benchmark datasets demonstrate 
 
 ### 📰 News
 
--   [2025/02/27] 🎉 Our paper has been accepted to CVPR 2025 !!
+-   [2025/02/27] 🎉 Our paper has been accepted to CVPR2025!!
 -   [2024/12/24] 📄 [arxiv](https://arxiv.org/abs/2412.18219) paper has been released.
 -   [2024/12/24] 🏁 Code has been released.
 

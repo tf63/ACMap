@@ -14,11 +14,13 @@ as tasks increase. Extensive experiments on five benchmark datasets demonstrate 
 
 </div>
 
+![](docs/method.png)
+
 ### 📰 News
 
-- [2025/02/27] 🎉 Our paper has been accepted to CVPR 2025 !!
-- [2024/12/24] 📄 [arxiv](https://arxiv.org/abs/2412.18219) paper has been released.
-- [2024/12/24] 🏁 Code has been released.
+-   [2025/02/27] 🎉 Our paper has been accepted to CVPR 2025 !!
+-   [2024/12/24] 📄 [arxiv](https://arxiv.org/abs/2412.18219) paper has been released.
+-   [2024/12/24] 🏁 Code has been released.
 
 ### 💐 Acknowledgements
 
@@ -33,8 +35,8 @@ We extend our gratitude to the authors of the following resources for their inva
 
 This repository supports two setup methods:
 
--  ⭐️ **A. Container setup with Docker (recommended)**
--  👻 **B. Local setup with Rye**
+-   ⭐️ **A. Container setup with Docker (recommended)**
+-   👻 **B. Local setup with Rye**
 
 Windows is not supported, so please refer to `docker/Dockerfile` and `pyproject.toml` to set up the environment manually.
 

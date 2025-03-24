@@ -30,7 +30,7 @@ ARG USER_GID=10001
 ARG USER_NAME=user
 ARG GROUP_NAME=user
 
-# Create a group if it does not exist成
+# Create a group if it does not exist
 RUN if ! getent group $USER_GID >/dev/null; then \
     groupadd -g $USER_GID $GROUP_NAME; \
     fi

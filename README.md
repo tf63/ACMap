@@ -14,7 +14,13 @@ as tasks increase. Extensive experiments on five benchmark datasets demonstrate 
 
 </div>
 
-### Acknowledgement
+### 📰 News
+
+- [2025/02/27] 🎉 Our paper has been accepted to CVPR 2025 !!
+- [2024/12/24] 📄 [arxiv](https://arxiv.org/abs/2412.18219) paper has been released.
+- [2024/12/24] 🏁 Code has been released.
+
+### 💐 Acknowledgements
 
 We extend our gratitude to the authors of the following resources for their invaluable contributions to the field of class-incremental learning, which significantly informed and inspired our research:
 
@@ -23,16 +29,16 @@ We extend our gratitude to the authors of the following resources for their inva
 -   [Revisiting Class-Incremental Learning with Pre-Trained Models: Generalizability and Adaptivity are All You Need](https://github.com/zhoudw-zdw/RevisitingCIL)
 -   [Expandable Subspace Ensemble for Pre-Trained Model-Based Class-Incremental Learning](https://github.com/sun-hailong/CVPR24-Ease)
 
-## Installation
+## 💬 Installation
 
 This repository supports two setup methods:
 
--   **A. Container setup with Docker (recommended)**
--   **B. Local setup with Rye**
+-  ⭐️ **A. Container setup with Docker (recommended)**
+-  👻 **B. Local setup with Rye**
 
 Windows is not supported, so please refer to `docker/Dockerfile` and `pyproject.toml` to set up the environment manually.
 
-### A. Container setup with Docker (recommended)
+### ⭐️ A. Container setup with Docker (recommended)
 
 Build the Docker container:
 
@@ -52,7 +58,7 @@ Start the container shell:
 bash docker.sh shell
 ```
 
-### B. Local setup with Rye
+### 👻 B. Local setup with Rye
 
 If you haven't installed [Rye](https://rye.astral.sh/guide/installation/) yet, run:
 
@@ -66,7 +72,7 @@ You can install Python and the necessary packages:
 rye sync
 ```
 
-## Dataset Preparation
+## 🌠 Dataset Preparation
 
 Download the datasets with `cmd/download.py` from the [source](https://github.com/sun-hailong/CVPR24-Ease), and extract its contents:
 
@@ -91,7 +97,7 @@ python3 cmd/download.py --help
 >
 > https://github.com/zhoudw-zdw/RevisitingCIL
 
-## Training
+## 🚵 Training
 
 To start training, run the following command:
 

@@ -1,9 +1,9 @@
 <div align="center">
 <h1>Adapter Merging with Centroid Prototype Mapping <br> for Scalable Class-Incremental Learning</h1>
-
+    
 <i>Takuma Fukuda</i>, <i>Hiroshi Kera</i>, <i>Kazuhiko Kawamoto</i>
 
-_https://arxiv.org/abs/2412.18219_
+[[arxiv]](https://arxiv.org/abs/2412.18219) | [[poster]](https://cvpr.thecvf.com/virtual/2025/poster/32443)
 
 **Abstract**
 

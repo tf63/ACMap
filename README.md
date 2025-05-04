@@ -1,6 +1,15 @@
 <div align="center">
 <h1>Adapter Merging with Centroid Prototype Mapping <br> for Scalable Class-Incremental Learning</h1>
-    
+
+[![GitHub stars](https://img.shields.io/github/stars/tf63/ACMap?style=social)](https://github.com/tf63/ACMap/stargazers)
+[![arXiv](https://img.shields.io/badge/arxiv-2412.18219-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.18219)
+[![Poster@CVPR2025](https://img.shields.io/badge/Poster-CVPR2025-1B427D?logo=files&logoColor=white)](https://cvpr.thecvf.com/virtual/2025/poster/32443)
+![Python](https://img.shields.io/badge/Python-3.8.10-3571A1?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0.1-5F9870?logo=pytorch&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-11.7-89BF3E?logo=nvidia&logoColor=white)
+![License: MIT](https://img.shields.io/badge/LICENSE-MIT-yellow?logo=open-source-initiative)
+
+
 <i>Takuma Fukuda</i>, <i>Hiroshi Kera</i>, <i>Kazuhiko Kawamoto</i>
 
 [[arxiv]](https://arxiv.org/abs/2412.18219) | [[poster]](https://cvpr.thecvf.com/virtual/2025/poster/32443)

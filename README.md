@@ -135,3 +135,15 @@ To enable this, obtain an API key from [W&B](https://wandb.ai/) and add it to `.
 ```bash
 python3 src/acmap/train.py --logger wandb
 ```
+
+## Citation
+```bibtex
+@InProceedings{Fukuda_2025_CVPR,
+    author    = {Fukuda, Takuma and Kera, Hiroshi and Kawamoto, Kazuhiko},
+    title     = {Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {4884-4893}
+}
+```

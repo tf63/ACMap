@@ -136,7 +136,7 @@ To enable this, obtain an API key from [W&B](https://wandb.ai/) and add it to `.
 python3 src/acmap/train.py --logger wandb
 ```
 
-## Citation
+## 🔗 Citation
 ```bibtex
 @InProceedings{Fukuda_2025_CVPR,
     author    = {Fukuda, Takuma and Kera, Hiroshi and Kawamoto, Kazuhiko},

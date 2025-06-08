@@ -3,7 +3,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/tf63/ACMap?style=social)](https://github.com/tf63/ACMap/stargazers)
 [![arXiv](https://img.shields.io/badge/arxiv-2412.18219-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.18219)
-[![Poster@CVPR2025](https://img.shields.io/badge/Poster-CVPR2025-1B427D?logo=files&logoColor=white)](https://cvpr.thecvf.com/virtual/2025/poster/32443)
+[![Poster@CVPR2025](https://img.shields.io/badge/Poster-CVPR2025-1B427D?logo=files&logoColor=white)](https://openaccess.thecvf.com/content/CVPR2025/html/Fukuda_Adapter_Merging_with_Centroid_Prototype_Mapping_for_Scalable_Class-Incremental_Learning_CVPR_2025_paper.html)
 ![Python](https://img.shields.io/badge/Python-3.8.10-3571A1?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0.1-5F9870?logo=pytorch&logoColor=white)
 ![CUDA](https://img.shields.io/badge/CUDA-11.7-89BF3E?logo=nvidia&logoColor=white)
@@ -27,7 +27,7 @@ as tasks increase. Extensive experiments on five benchmark datasets demonstrate 
 
 ### 📰 News
 
--   [2025/02/27] 🎉 Our paper has been accepted to CVPR2025!!
+-   [2025/02/27] 🎉 [Our paper has been accepted to CVPR2025!!](https://openaccess.thecvf.com/content/CVPR2025/html/Fukuda_Adapter_Merging_with_Centroid_Prototype_Mapping_for_Scalable_Class-Incremental_Learning_CVPR_2025_paper.html)
 -   [2024/12/24] 📄 [arxiv](https://arxiv.org/abs/2412.18219) paper has been released.
 -   [2024/12/24] 🏁 Code has been released.
 
@@ -136,10 +136,14 @@ To enable this, obtain an API key from [W&B](https://wandb.ai/) and add it to `.
 python3 src/acmap/train.py --logger wandb
 ```
 
+## 📫 Contact
+
+For questions or collaborations, feel free to contact: **tf63.dev@gmail.com**
+
 ## 🔗 Citation
 ```bibtex
 @InProceedings{Fukuda_2025_CVPR,
-    author    = {Fukuda, Takuma and Kera, Hiroshi and Kawamoto, Kazuhiko},
+    author    = {Takuma Fukuda and Hiroshi Kera and Kazuhiko Kawamoto},
     title     = {Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning},
     booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
     month     = {June},
